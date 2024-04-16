@@ -1,0 +1,22 @@
+String number = scanner.nextLine();
+        int[] digits = new int[number.length()];
+        for (int i = 0; i < digits.length; i++) {
+            digits[i] = Character.getNumericValue(number.charAt(i));
+        }
+        int sumEven = 0;
+        int sumOdd = 0;
+
+        for (int digit : digits) {
+            if (digit % 2 == 0) {
+                sumEven += digit;
+            } else {
+                sumOdd += digit;
+            }
+        }
+        if (sumEven > sumOdd) {
+            System.out.println(sumEven + " energy drinks");
+        } else if (sumOdd > sumEven) {
+            System.out.println(sumOdd + " cups of coffee");
+        } else {
+            System.out.println(sumOdd + " of both");
+        }
