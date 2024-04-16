@@ -1,0 +1,46 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class WordAnagrams {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String word = scanner.nextLine();
+        int lines = Integer.parseInt(scanner.nextLine());
+        for (int i = 0; i < lines; i++) {
+            String words = scanner.nextLine();
+            char[] arr1 = word.toCharArray();
+            char[] arr2 = words.toCharArray();
+
+            if (word.length() != words.length()) {
+                System.out.println("No");
+            } else {
+                Arrays.sort(arr1);
+                Arrays.sort(arr2);
+
+                if (Arrays.equals(arr1, arr2)) {
+                    System.out.println("Yes");
+                } else {
+                    System.out.println("No");
+                }
+            }
+        }
+    }
+}
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
