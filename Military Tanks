@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class MilitaryTanks {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String moves = scanner.nextLine();
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i < moves.length(); i++) {
+
+            switch (moves.charAt(i)) {
+                case 'R':
+                    x++;
+                    break;
+                case 'U':
+                    y++;
+                    break;
+                case 'L':
+                    x--;
+                    break;
+                case 'D':
+                    y--;
+                    break;
+            }
+
+        }
+        System.out.println("(" + x + ", " + y + ")");
+    }
+}
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
