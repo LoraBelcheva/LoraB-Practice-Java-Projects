@@ -1,0 +1,25 @@
+package My_practise;
+
+import java.util.Scanner;
+
+public class ElectronicMessage {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String message = scanner.nextLine();
+        int currentLengthBroken = 0;
+        int maxLengthBroken = 0;
+
+        for (int i = 0; i < message.length() - 1; i++) {
+            if (!(Character.isLetter(message.charAt(i)) || Character.isDigit(message.charAt(i))
+            || message.charAt(i)== ' ')){
+                currentLengthBroken++;
+                maxLengthBroken = Math.max(maxLengthBroken, currentLengthBroken);
+
+            } else {
+                currentLengthBroken = 0;
+            }
+
+        }
+        System.out.println(maxLengthBroken);
+    }
+}
